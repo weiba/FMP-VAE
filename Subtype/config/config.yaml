@@ -1,0 +1,21 @@
+# general seed21
+seed: 21
+workers: 8
+
+# train options
+start_epoch: 0
+epochs: 600
+
+# model options   #原128 跑BRCA换成了512
+feature_dim: 128
+model_path: "save/model"
+reload: False
+
+# loss options
+#gbmnew
+# learning_rate: 0.0001
+#brca   0.0000001可以跑出，再多一个0 结果下降。目前0.0000003最好
+learning_rate: 0.0000003
+weight_decay: 0.
+instance_temperature: 0.5
+cluster_temperature: 1.0
